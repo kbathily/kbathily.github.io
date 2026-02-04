@@ -34,7 +34,7 @@ header {
 }
 
 main {
-  background: #fffdf9;
+  background: #fffef9;
 }
 
 footer {
@@ -47,10 +47,6 @@ h1, h2, h3 {
   font-family: "Montserrat", "Open Sans", Arial, sans-serif;
   color: var(--accent);
   line-height: 1.2;
-}
-
-h1 {
-  margin-top: 0.5rem;
 }
 
 p, li {
