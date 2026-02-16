@@ -39,6 +39,16 @@ header {
   border-bottom: 4px solid var(--accent);
 }
 
+.primary-nav,
+.secondary-nav {
+  margin-top: 0.5rem;
+}
+
+.secondary-nav {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
 /* Main content background */
 main {
   background: #f1f2dd;
