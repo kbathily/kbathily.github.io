@@ -5,11 +5,11 @@
 :root {
   --bg: #f6f2ea;
   --text: #1f2933;
-  --accent: #2a6f97;
+  --accent: #1f5d80;
   --panel: #e9dcc9;
   --panel-dark: #d6c3a5;
-  --link: #1b5f7a;
-  --link-hover: #14455a;
+  --link: #144f69;
+  --link-hover: #0f3b4f;
 }
 
 /* Use border-box sizing everywhere */
@@ -44,9 +44,15 @@ header {
   margin-top: 0.5rem;
 }
 
+.primary-nav a,
+.secondary-nav a {
+  display: inline-block;
+  margin: 0.2rem 0;
+}
+
 .secondary-nav {
   font-size: 0.9rem;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 /* Main content background */
@@ -91,6 +97,15 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--link-hover);
+  outline-offset: 2px;
+}
+
 /* Figure spacing */
 figure {
   margin: 1rem 0;
@@ -109,4 +124,67 @@ blockquote {
   padding: 0.75rem 1rem;
   background: var(--panel);
   border-left: 4px solid var(--accent);
+}
+
+form,
+fieldset,
+table,
+.landing-callout,
+.feature-card {
+  background: #ffffff;
+  border: 1px solid var(--panel-dark);
+  border-radius: 6px;
+}
+
+form {
+  padding: 1rem;
+}
+
+fieldset {
+  margin: 1rem 0;
+  padding: 0.75rem;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+  max-width: 100%;
+}
+
+button {
+  background: var(--accent);
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 4px;
+}
+
+button:hover,
+button:focus {
+  background: var(--link-hover);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th,
+td {
+  border: 1px solid var(--panel-dark);
+  padding: 0.5rem;
+  text-align: left;
+}
+
+th {
+  background: var(--panel);
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;  
 }
