@@ -182,9 +182,12 @@ td {
 th {
   background: var(--panel);
 }
-
-.card-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;  
+.feature-card {
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.landing-callout {
+  padding: 1.5rem;
+  margin: 2rem 0;
+  text-align: center;
 }
