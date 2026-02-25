@@ -190,4 +190,8 @@ th {
   padding: 1.5rem;
   margin: 2rem 0;
   text-align: center;
+}.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;  
 }

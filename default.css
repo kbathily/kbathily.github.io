@@ -3,13 +3,13 @@
 
 /* Color palette variables */
 :root {
-  --bg: #f2f7f4;
+  --bg: #f6f2ea;
   --text: #123524;
-  --accent: #1f7a3b;
+  --accent: #1f5d80;
   --panel: #e4efe8;
-  --panel-dark: #cfe2d6;
-  --link: #2e8b57;
-  --link-hover: #1f6f44;
+  --panel-dark: #545454;
+  --link: #885c70;
+  --link-hover: #1f226f;
 }
 
 /* Global box-sizing */
@@ -35,26 +35,26 @@ header, main, footer {
 
 /* Header styling */
 header {
-  background: var(--panel);
+  background: #ffffff;
   border-bottom: 4px solid var(--accent);
 }
 
 /* Main content panel */
 main {
-  background: #e8f4ec;
+  background: var(--bg);
 }
 
 /* Footer styling */
 footer {
-  background: var(--panel-dark);
+  background: #ffffff;
   border-top: 4px solid var(--accent);
   font-size: 0.95rem;
 }
 
 /* Heading typography */
 h1, h2, h3 {
-  font-family: "Montserrat", "Open Sans", Arial, sans-serif;
-  color: var(--accent);
+  font-family: "Montserrat", Arial, sans-serif;
+  color: #545454;
   line-height: 1.2;
 }
 
@@ -79,6 +79,15 @@ a {
 a:hover, a:focus {
   color: var(--link-hover);
   text-decoration: underline;
+}
+
+.intro-link {
+  color: #1a4fd6;
+}
+
+.intro-link:hover,
+.intro-link:focus {
+  color: #114738;
 }
 
 /* Figure spacing */
