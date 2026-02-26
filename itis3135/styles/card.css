@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(120deg, #1e3c72, #2a5298);
+  margin: 0;
+  padding: 20px;
+}
+
+/* Playing cards container */
+#playing-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Each card */
+.card {
+  width: 140px;
+  height: 200px;
+  background: white;
+  border-radius: 10px;
+  border: 2px solid #333;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Left corner */
+.left {
+  align-self: flex-start;
+}
+
+/* Middle symbols */
+.middle {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Right corner */
+.right {
+  align-self: flex-end;
+}
