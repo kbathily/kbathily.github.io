@@ -4,66 +4,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/default.css">
-    <title>Bathily's Brave Kudu ~ ITIS 3135 | Inventory</title>
+    <title>Bathily's Brave Kudu ~ ITIS 3135 | Book Inventory</title>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+  margin: 20px auto;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* ---------- Row Backgrounds using Attribute Selectors ---------- */
+tr[class="read"] {
+  background-image: linear-gradient(to right, #d4edda, #f0fff4);
+}
+
+tr[class="to-read"] {
+  background-image: linear-gradient(to right, #fff3cd, #fffdf0);
+}
+
+tr[class="in-progress"] {
+  background-image: linear-gradient(to right, #d1ecf1, #f0fbff);
+}
+
+span[class^="rate"] > span {
+  border: 1px solid #999;
+  border-radius: 3px;
+  margin: 2px;
+  height: 12px;
+  width: 12px;
+  background-color: #eee;
+  box-sizing: border-box;
+}
+
+/* ---------- Rating Fill ---------- */
+/* one → first descendant only */
+span[class~="one"] > span:first-child {
+  background-image: linear-gradient(to right, gold, orange);
+}
+
+/* two → first TWO descendants */
+span[class~="two"] > span:nth-child(1),
+span[class~="two"] > span:nth-child(2) {
+  background-image: linear-gradient(to right, gold, orange);
+}
+
+/* three → ALL three descendants */
+span[class~="three"] > span {
+  background-image: linear-gradient(to right, gold, orange);
+}
+</style>
 </head>
 <body>
     <div data-include="components/header.html"></div>
     <main>
-        <h2>Brave Kudu Inventory Board</h2>
-        <p>
-            Current stock for the Brave Kudu Flavor Lab pop-up. This page represents the Book Inventory
-            App concept with a themed product catalog.
-        </p>
+        <h1>Book Inventory</h1>
 
         <table>
-            <caption>Weekly Snack and Merch Inventory</caption>
-            <thead>
-                <tr>
-                    <th scope="col">Item</th>
-                    <th scope="col">Category</th>
-                    <th scope="col">Units</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Baobab Honey Bites</td>
-                    <td>Snack</td>
-                    <td>28</td>
-                    <td>$4.00</td>
-                    <td>In Stock</td>
-                </tr>
-                <tr>
-                    <td>Savanna Spice Chips</td>
-                    <td>Snack</td>
-                    <td>12</td>
-                    <td>$3.50</td>
-                    <td>Low Stock</td>
-                </tr>
-                <tr>
-                    <td>Waraba Sticker Pack</td>
-                    <td>Merch</td>
-                    <td>44</td>
-                    <td>$2.00</td>
-                    <td>In Stock</td>
-                </tr>
-                <tr>
-                    <td>Village Recipe Zine</td>
-                    <td>Print</td>
-                    <td>7</td>
-                    <td>$6.00</td>
-                    <td>Reorder Soon</td>
-                </tr>
-                <tr>
-                    <td>Midnight Mango Sauce</td>
-                    <td>Sauce</td>
-                    <td>0</td>
-                    <td>$5.00</td>
-                    <td>Sold Out</td>
-                </tr>
-            </tbody>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Category</th>
+              <th>Status</th>
+              <th>Rate</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr class="read">
+              <td>The Great Gatsby</td>
+              <td>F. Scott Fitzgerald</td>
+              <td>Classic</td>
+              <td><span class="status">Read</span></td>
+              <td>
+                <span class="rate three">
+                  <span></span><span></span><span></span>
+                </span>
+              </td>
+            </tr>
+
+            <tr class="to-read">
+              <td>Atomic Habits</td>
+              <td>James Clear</td>
+              <td>Self-help</td>
+              <td><span class="status">To Read</span></td>
+              <td>
+                <span class="rate">
+                  <span></span><span></span><span></span>
+                </span>
+              </td>
+            </tr>
+
+            <tr class="in-progress">
+              <td>Clean Code</td>
+              <td>Robert C. Martin</td>
+              <td>Programming</td>
+              <td><span class="status">In Progress</span></td>
+              <td>
+                <span class="rate">
+                  <span></span><span></span><span></span>
+                </span>
+              </td>
+            </tr>
+
+            <tr class="read">
+              <td>1984</td>
+              <td>George Orwell</td>
+              <td>Dystopian</td>
+              <td><span class="status">Read</span></td>
+              <td>
+                <span class="rate two">
+                  <span></span><span></span><span></span>
+                </span>
+              </td>
+            </tr>
+          </tbody>
         </table>
     </main>
     <div data-include="components/footer.html"></div>
