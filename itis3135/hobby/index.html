@@ -33,13 +33,13 @@
             z-index: 100;
         }
 
-        header h1 {
-            color: #ffffff;
+                h1 {
             font-size: 3rem;
-            margin-bottom: 1.5rem;
+        }
+
+        .main-header {
             text-align: center;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            letter-spacing: 2px;
+            color: #ffffff;
         }
 
         nav {
@@ -239,7 +239,6 @@
             padding: 0.8rem;
             margin-bottom: 1rem;
             background-color: #fef3c7;
-            border: 2px solid #f59e0b;
             color: #92400e;
             border-radius: 5px;
             font-family: inherit;
@@ -316,15 +315,13 @@
         .validation-icons img {
             height: 31px;
             width: auto;
-            border: 2px solid #f59e0b;
             border-radius: 5px;
             background: #fef3c7;
-            padding: 2px;
         }
 
         /* ===== RESPONSIVE DESIGN ===== */
-        @media (max-width: 768px) {
-            header h1 {
+            @media (max-width: 768px) {
+            h1 {
                 font-size: 2rem;
             }
 
@@ -332,7 +329,7 @@
                 padding: 0.6rem 1rem;
                 font-size: 0.9rem;
             }
-
+        
             nav .divider {
                 font-size: 1.2rem;
             }
