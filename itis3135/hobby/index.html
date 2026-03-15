@@ -321,9 +321,7 @@
 
         /* ===== RESPONSIVE DESIGN ===== */
             @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
+    
 
             nav button {
                 padding: 0.6rem 1rem;
@@ -332,10 +330,6 @@
         
             nav .divider {
                 font-size: 1.2rem;
-            }
-
-            h2 {
-                font-size: 1.8rem;
             }
 
             section {
@@ -354,7 +348,7 @@
 </head>
 <body>
     <header>
-        <h1>⚽ The Beautiful Game ⚽</h1>
+        <h1>The Beautiful Game</h1>
         <nav>
             <button class="nav-btn active" data-section="what">What</button>
             <span class="divider">⚽</span>
@@ -382,9 +376,10 @@
             </div>
 
             <figure>
-                <img src="../images/myphotos/Charlotte%20FC%20game.jpeg" alt="Professional soccer match in action" width="600" height="400">
-                <figcaption>Charlotte FC Game - Soccer in Action
-                    <p class="ai-prompt"><em>Personal photo: Captured during a Charlotte FC game, showcasing the excitement and energy of professional soccer play</em></p>
+                <img src="../images/myphotos/Club-Olympic-of-Bamako.JPG"
+                    alt="My team picture of Bamako soccer match">
+                <figcaption>
+                    <em>Personal photo captured during a Club Olympic of Bamako soccer match, showing the excitement of local play.</em>
                 </figcaption>
             </figure>
 
@@ -615,9 +610,9 @@
             </table>
 
             <figure>
-                <img src="../images/myphotos/My%20Charlotte%20Team.JPG" alt="My soccer team" width="600" height="400">
-                <figcaption>My Soccer Team - United Together
-                    <p class="ai-prompt"><em>Personal photo: My team gathered together, showing the camaraderie and unity that makes soccer special</em></p>
+                <img src="../images/myphotos/world-best-players.JPG" alt="World's Best Soccer Player" width="600" height="400">
+                <figcaption><em>Messi-Cristiano</em> - One of the World's Best Soccer Players
+                    <p class="ai-prompt"><em>world's class players: One of the greatest soccer players of all time</em></p>
                 </figcaption>
             </figure>
         </section>
@@ -631,8 +626,8 @@
             </div>
 
             <figure>
-                <img src="../images/myphotos/Celebration%20of%20Trophy.jpeg" alt="Trophy celebration" width="600" height="400">
-                <figcaption>The Joy of Championship Victory
+                <img src="../images/myphotos/Benefit-playing-soccer.png" alt="Trophy celebration" width="600" height="400">
+                <figcaption>It's All Worth It - playing is important for your health and well-being.
                     <p class="ai-prompt"><em>Personal photo: Celebrating the trophy, capturing the ultimate reward for passion, dedication, and teamwork in soccer</em></p>
                 </figcaption>
             </figure>
@@ -654,24 +649,7 @@
 
             <div class="content-block">
                 <h3 class="gold-heading">All Prompts Used</h3>
-                
-                <p><strong>1. What Section - Players in Action:</strong><br>
-                "Generate a professional soccer match scene with two teams playing, showing players in mid-action with a ball, stadium lights in background, dynamic lighting, photorealistic style"</p>
-                
-                <p><strong>2. Who Section - Team Diversity:</strong><br>
-                "Create an image of a diverse soccer team of different ethnicities and genders, celebrating together in joy, in a soccer pitch, warm golden hour lighting, photorealistic, unity and teamwork theme"</p>
-                
-                <p><strong>3. When Section - Sunset Training:</strong><br>
-                "Create an image of a soccer field during golden hour sunset with players training, long shadows, warm orange and golden lighting, atmospheric and beautiful, photorealistic"</p>
-                
-                <p><strong>4. Where Section - Iconic Stadium:</strong><br>
-                "Generate an image of an iconic beautiful soccer stadium, modern architecture, filled with excited fans, vibrant atmosphere, professional lighting, grand scale, photorealistic"</p>
-                
-                <p><strong>5. How Section - Training Drills:</strong><br>
-                "Create an image of a professional soccer training session, players practicing drills with cones, coach directing, soccer field with clear markings, athletic development focus, bright daylight, photorealistic"</p>
-                
-                <p><strong>6. Why Section - Goal Celebration:</strong><br>
-                "Generate an image of soccer players celebrating joyfully after scoring a goal, hugging each other, emotional happiness, pyrotechnics and stadium lights, team unity, photorealistic, dynamic energy"</p>
+                <p><strong>5. Why Section - Goal Celebration:</strong><br>
             </div>
 
             <div class="content-block">
@@ -700,33 +678,33 @@
 
     <script>
         // Navigation functionality
-        const navButtons = document.querySelectorAll('.nav-btn');
-        const sections = document.querySelectorAll('section');
+const navButtons = document.querySelectorAll('.nav-btn');
+const sections = document.querySelectorAll('section');
 
-        navButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const sectionId = this.getAttribute('data-section');
-                
-                // Hide all sections
-                sections.forEach(section => {
-                    section.classList.remove('active');
-                });
-                
-                // Remove active class from all buttons
-                navButtons.forEach(btn => {
-                    btn.classList.remove('active');
-                });
-                
-                // Show selected section
-                document.getElementById(sectionId).classList.add('active');
-                
-                // Add active class to clicked button
-                this.classList.add('active');
-                
-                // Scroll to top of page
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
+navButtons.forEach((button) => {
+    button.addEventListener('click', function() {
+        const sectionId = this.getAttribute('data-section');
+        
+        // Hide all sections
+        sections.forEach((section) => {
+            section.classList.remove('active');
         });
+        
+        // Remove active class from all buttons
+        navButtons.forEach((btn) => {
+            btn.classList.remove('active');
+        });
+        
+        // Show selected section
+        document.getElementById(sectionId).classList.add('active');
+        
+        // Add active class to clicked button
+        this.classList.add('active');
+        
+        // Scroll to top of page
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
     </script>
 </body>
 </html>
