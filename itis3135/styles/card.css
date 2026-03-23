@@ -1,45 +1,67 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(120deg, #1e3c72, #2a5298);
-  margin: 0;
-  padding: 20px;
-}
-
-/* Playing cards container */
-#playing-cards {
+.cards-stage {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
-}
-
-/* Each card */
-.card {
-  width: 140px;
-  height: 200px;
-  background: white;
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-/* Left corner */
-.left {
-  align-self: flex-start;
-}
-
-/* Middle symbols */
-.middle {
-  align-self: center;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  gap: 1rem;
+  margin: 1.25rem auto;
+  padding: 1.25rem;
+  max-width: 900px;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #0e5a2b, #0a3f20);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.15);
 }
 
-/* Right corner */
-.right {
-  align-self: flex-end;
+.playing-card {
+  inline-size: 130px;
+  aspect-ratio: 13 / 19;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid #d7d7d7;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: 0.5rem;
+}
+
+.corner {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.corner-top {
+  justify-self: start;
+}
+
+.corner-bottom {
+  justify-self: end;
+  align-self: end;
+  transform: rotate(180deg);
+}
+
+.pip {
+  justify-self: center;
+  align-self: center;
+  font-size: 2.3rem;
+  line-height: 1;
+}
+
+.heart,
+.diamond {
+  color: #b3002d;
+}
+
+.spade,
+.club {
+  color: #1a1a1a;
+}
+
+@media (max-width: 560px) {
+  .playing-card {
+    inline-size: 105px;
+  }
+
+  .pip {
+    font-size: 1.9rem;
+  }
 }
