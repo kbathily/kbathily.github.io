@@ -1,142 +1,47 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/default.css">
-    <title>Bathily's Brave Kudu ~ ITIS 3135 | Book Inventory</title>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <style>
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f6f8;
-}
-
-table {
-  border-collapse: collapse;
-  width: 90%;
-  margin: 20px auto;
-}
-
-th, td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
-}
-
-h1 {
-  text-align: center;
-}
-
-/* ---------- Row Backgrounds using Attribute Selectors ---------- */
-tr[class="read"] {
-  background-image: linear-gradient(to right, #d4edda, #f0fff4);
-}
-
-tr[class="to-read"] {
-  background-image: linear-gradient(to right, #fff3cd, #fffdf0);
-}
-
-tr[class="in-progress"] {
-  background-image: linear-gradient(to right, #d1ecf1, #f0fbff);
-}
-
-span[class^="rate"] > span {
-  border: 1px solid #999;
-  border-radius: 3px;
-  margin: 2px;
-  height: 12px;
-  width: 12px;
-  background-color: #eee;
-  box-sizing: border-box;
-}
-
-/* ---------- Rating Fill ---------- */
-/* one → first descendant only */
-span[class~="one"] > span:first-child {
-  background-image: linear-gradient(to right, gold, orange);
-}
-
-/* two → first TWO descendants */
-span[class~="two"] > span:nth-child(1),
-span[class~="two"] > span:nth-child(2) {
-  background-image: linear-gradient(to right, gold, orange);
-}
-
-/* three → ALL three descendants */
-span[class~="three"] > span {
-  background-image: linear-gradient(to right, gold, orange);
-}
-</style>
+    <link rel="stylesheet" href="styles/default.css">
+    <title>K Bathily's Brave Kudu ~ ITIS 3135 | Book Inventory App</title>
 </head>
 <body>
-    <div data-include="components/header.html"></div>
+    <header>
+        <h1>K Bathily's Brave Kudu ~ ITIS 3135</h1>
+        <nav aria-label="Primary course navigation">
+            <a href="index.html">Home</a> |
+            <a href="contract.html">Contract</a> |
+            <a href="survey.html">Survey</a> |
+            <a href="cards.html">Cards</a> |
+            <a href="inventory.html">Inventory</a> |
+            <a href="documentation.html">Documentation</a> |
+            <a href="product.html">Product</a> |
+            <a href="gallery.html">Gallery</a> |
+            <a href="highlight.html">Highlight</a> |
+            <a href="website_evaluations.html">Website Evaluations</a> |
+            <a href="instructions.html">Instructions</a> |
+            <a href="intro_form.html">Intro Form</a>
+        </nav>
+        <nav aria-label="Additional links">
+            <a href="stuff/This%20is%20%F0%9F%91%8DGriGrI.htm">Crappy Page</a> |
+            <a href="hobby/index.html">Hobby</a>
+        </nav>
+    </header>
     <main>
-        <h1>Safari Equipment Inventory</h1>
-
-        <table>
-          <thead>
-            <tr>
-              <th>Item</th>
-              <th>Description</th>
-              <th>Type</th>
-              <th>Availability</th>
-              <th>Rating</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr class="read">
-              <td>Binoculars</td>
-              <td>High-powered 10x42 for wildlife viewing</td>
-              <td>Optics</td>
-              <td><span class="status">Available</span></td>
-              <td>
-                <span class="rate three">
-                  <span></span><span></span><span></span>
-                </span>
-              </td>
-            </tr>
-
-            <tr class="to-read">
-              <td>Water Bottle</td>
-              <td>Insulated 1L for hot climates</td>
-              <td>Hydration</td>
-              <td><span class="status">Low Stock</span></td>
-              <td>
-                <span class="rate">
-                  <span></span><span></span><span></span>
-                </span>
-              </td>
-            </tr>
-
-            <tr class="in-progress">
-              <td>Safari Hat</td>
-              <td>Wide-brim sun protection</td>
-              <td>Clothing</td>
-              <td><span class="status">In Stock</span></td>
-              <td>
-                <span class="rate">
-                  <span></span><span></span><span></span>
-                </span>
-              </td>
-            </tr>
-
-            <tr class="read">
-              <td>Compass</td>
-              <td>Magnetic navigation tool</td>
-              <td>Navigation</td>
-              <td><span class="status">Available</span></td>
-              <td>
-                <span class="rate two">
-                  <span></span><span></span><span></span>
-                </span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <h2>Book Inventory App</h2>
     </main>
-    <div data-include="components/footer.html"></div>
-    <script src="Scripts/htmlinclude.js"></script>
+    <footer>
+        <p>
+            <a href="https://github.com/kbathily" target="_blank" rel="noopener noreferrer">GitHub</a> |
+            <a href="https://webpages.charlotte.edu/kbathily" target="_blank" rel="noopener noreferrer">CLT Web</a> |
+            <a href="https://kbathily.github.io" target="_blank" rel="noopener noreferrer">GitHub.io</a> |
+            <a href="https://www.freecodecamp.org/bathily" target="_blank" rel="noopener noreferrer">freeCodeCamp</a> |
+            <a href="https://www.freecodecamp.org/certification/bathily/responsive-web-design-v9" target="_blank" rel="noopener noreferrer">freeCodeCamp Certification</a> |
+            <a href="https://www.linkedin.com/in/bathily-bathily-a34b893a7/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </p>
+        <p>Page built by <a href="../bathilydesigns.net/index.html">Bathily Designs</a> &copy; 2026</p>
+    </footer>
 </body>
 </html>
