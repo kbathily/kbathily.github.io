@@ -232,27 +232,27 @@ ${funnyMarkup}${shareMarkup}</ul>${shareParagraph}
 
 function buildJsonData(data) {
     return {
-        first_name: data.firstName,
-        middle_name: data.middleName,
-        preferred_name: data.preferredName,
-        last_name: data.lastName,
+        firstName: data.firstName,
+        middleName: data.middleName,
+        preferredName: data.preferredName,
+        lastName: data.lastName,
         divider: data.divider,
-        mascot_adjective: data.mascotAdjective,
-        mascot_animal: data.mascotAnimal,
-        acknowledgment_statement: data.acknowledgmentStatement,
-        acknowledgment_date: data.acknowledgmentDate,
+        mascotAdjective: data.mascotAdjective,
+        mascotAnimal: data.mascotAnimal,
+        acknowledgmentStatement: data.acknowledgmentStatement,
+        acknowledgmentDate: data.acknowledgmentDate,
         image: data.pictureSrc,
-        image_caption: data.pictureCaption,
-        personal_statement: data.personalStatement,
-        personal_background: data.personalBackground,
-        academic_background: data.academicBackground,
-        professional_background: data.professionalBackground,
-        primary_computer: data.primaryComputer,
-        backup_plan: data.backupPlan,
-        funny_thing: data.funnyThing,
-        share_more: data.shareMore,
+        imageCaption: data.pictureCaption,
+        personalStatement: data.personalStatement,
+        personalBackground: data.personalBackground,
+        academicBackground: data.academicBackground,
+        professionalBackground: data.professionalBackground,
+        primaryComputer: data.primaryComputer,
+        backupPlan: data.backupPlan,
+        funnyThing: data.funnyThing,
+        shareMore: data.shareMore,
         quote: data.quoteText,
-        quote_author: data.quoteAuthor,
+        quoteAuthor: data.quoteAuthor,
         courses: data.courses,
         links: data.links
     };
@@ -320,6 +320,27 @@ function collectFormData() {
     };
 }
 
+function resetImagePreview() {
+    const preview = document.getElementById("picture-preview");
+    const caption = document.getElementById("picture-preview-caption");
+    const path = document.getElementById("picture-path").value.trim();
+    const pictureCaption = document.getElementById("picture-caption").value.trim();
+    preview.src = path || "images/myphotos/Selfy.jpg";
+    preview.alt = defaultImageAlt;
+    delete preview.dataset.uploadedSrc;
+    caption.innerHTML = `<i>${escapeHtml(pictureCaption || "Enjoying a sunny day at Campus.")}</i>`;
+}
+
+function resetToForm() {
+    document.getElementById("page-title").textContent = "Introduction Form";
+    document.getElementById("output-view").hidden = true;
+    document.getElementById("output-view").innerHTML = "";
+    document.getElementById("form-view").hidden = false;
+    document.getElementById("intro-form").reset();
+    renderCourses(defaultCourses);
+    resetImagePreview();
+}
+
 function showOutput(title, markup) {
     document.getElementById("page-title").textContent = title;
     document.getElementById("form-view").hidden = true;
@@ -335,18 +356,6 @@ function showOutput(title, markup) {
         });
     }
 }
-
-function resetImagePreview() {
-    const preview = document.getElementById("picture-preview");
-    const caption = document.getElementById("picture-preview-caption");
-    const path = document.getElementById("picture-path").value.trim();
-    const pictureCaption = document.getElementById("picture-caption").value.trim();
-    preview.src = path || "images/myphotos/Selfy.jpg";
-    preview.alt = defaultImageAlt;
-    delete preview.dataset.uploadedSrc;
-    caption.innerHTML = `<i>${escapeHtml(pictureCaption || "Enjoying a sunny day at Campus.")}</i>`;
-}
-
 function clearForm() {
     const form = document.getElementById("intro-form");
     Array.from(form.querySelectorAll("input, textarea")).forEach((element) => {
@@ -365,16 +374,6 @@ function clearForm() {
     document.getElementById("picture-preview").src = "";
     document.getElementById("picture-preview").alt = "Uploaded image preview";
     document.getElementById("picture-preview-caption").innerHTML = "<i></i>";
-}
-
-function resetToForm() {
-    document.getElementById("page-title").textContent = "Introduction Form";
-    document.getElementById("output-view").hidden = true;
-    document.getElementById("output-view").innerHTML = "";
-    document.getElementById("form-view").hidden = false;
-    document.getElementById("intro-form").reset();
-    renderCourses(defaultCourses);
-    resetImagePreview();
 }
 
 function handleSubmit(event) {
