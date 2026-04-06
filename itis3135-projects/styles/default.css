@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+:root {
+  --bg: #f8f6f2;
+  --panel: #f0e5d8;
+  --panel-dark: #dbc4aa;
+  --text: #1f1f1f;
+  --brand: #7a2e2e;
+  --brand-dark: #522020;
+  --link: #7a2e2e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #fffdf9 0%, var(--bg) 60%, #efe6da 100%);
+  line-height: 1.6;
+}
+
+header,
+main,
+footer {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+}
+
+header {
+  background: var(--panel);
+  border-bottom: 4px solid var(--brand);
+}
+
+h1 {
+  margin: 0;
+  color: var(--brand);
+  font-family: 'Playfair Display', Georgia, serif;
+  text-align: center;
+  font-size: 2.4rem;
+  letter-spacing: 0.04em;
+}
+
+.tagline {
+  margin: 0.35rem 0 0.8rem;
+  font-weight: 600;
+}
+
+nav a {
+  color: var(--link);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+nav a:hover,
+nav a:focus {
+  text-decoration: underline;
+}
+
+main {
+  background: #fffefa;
+  border-left: 1px solid var(--panel-dark);
+  border-right: 1px solid var(--panel-dark);
+}
+
+h2,
+h3 {
+  color: var(--brand);
+}
+
+figure {
+  margin: 1rem 0;
+  padding: 0.8rem;
+  border: 1px solid var(--panel-dark);
+  background: #fff9f2;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid var(--panel-dark);
+}
+
+ul {
+  padding-left: 1.3rem;
+}
+
+a {
+  color: var(--link);
+}
+
+a:hover,
+a:focus {
+  color: var(--brand-dark);
+}
+
+footer {
+  background: var(--panel);
+  border-top: 4px solid var(--brand);
+  font-size: 0.95rem;
+}
