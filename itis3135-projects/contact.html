@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles/default.css">
+  <title>BB's Bundles | Contact</title>
+</head>
+<body>
+  <!-- Shared header component -->
+  <div data-include="components/header.html"></div>
+
+  <main>
+    <h2>Contact And Consultation</h2>
+
+    <section class="contact-grid">
+      <article class="list-panel">
+        <h3>Let's Match Your Install</h3>
+        <p>
+          Complete this form to request bundle recommendations based on style,
+          preferred length, and budget. We usually respond within one business day.
+        </p>
+        <p class="helper-text">
+          Required fields are marked and checked before submission.
+        </p>
+      </article>
+
+      <article class="list-panel">
+        <!-- Client-side demo form for the assignment -->
+        <form id="contact-form" novalidate>
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="style">Preferred Style</label>
+          <select id="style" name="style" required>
+            <option value="">Choose one</option>
+            <option value="body-wave">Body Wave</option>
+            <option value="deep-wave">Deep Wave</option>
+            <option value="curly">Curly</option>
+            <option value="blonde-blend">Blonde Blend</option>
+          </select>
+
+          <label for="budget">Budget Range</label>
+          <select id="budget" name="budget" required>
+            <option value="">Choose one</option>
+            <option value="under-120">Under $120</option>
+            <option value="120-180">$120 - $180</option>
+            <option value="180-plus">$180+</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button class="btn btn-primary" type="submit">Submit Request</button>
+          <p id="form-status" class="form-status" aria-live="polite"></p>
+        </form>
+      </article>
+    </section>
+  </main>
+
+  <!-- Shared footer component -->
+  <div data-include="components/footer.html"></div>
+  <script src="Scripts/htmlinclude.js"></script>
+  <script src="Scripts/main.js"></script>
+</body>
+</html>
