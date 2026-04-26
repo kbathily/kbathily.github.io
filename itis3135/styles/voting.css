@@ -1,0 +1,29 @@
+.panel {
+    background: #f7f7f3;
+    border: 1px solid #c9c9bd;
+    border-radius: 8px;
+    margin: 1rem 0;
+    padding: 0.9rem;
+}
+
+#option-input,
+#voter-id,
+#vote-option {
+    display: block;
+    margin: 0.3rem 0 0.8rem;
+    max-width: 300px;
+    width: 100%;
+}
+
+#results-output {
+    background: #ffffff;
+    border: 1px solid #d8d8cf;
+    border-radius: 6px;
+    min-height: 120px;
+    padding: 0.7rem;
+    white-space: pre-wrap;
+}
+
+#voting-message {
+    font-weight: 600;
+}

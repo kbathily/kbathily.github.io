@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="stylesheet" href="styles/bank.css">
+    <title>K Bathily's Brave Kudu ~ ITIS 3135 | Horn Vault Banking</title>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h2>Brave Kudu Horn Vault Banking System</h2>
+
+        <section class="panel" aria-label="Transaction controls">
+            <h3>Make a Transaction</h3>
+            <label for="amount">Amount</label>
+            <input id="amount" type="number" min="1" step="1" placeholder="Enter amount" />
+            <div class="actions">
+                <button id="deposit-btn" type="button">Deposit</button>
+                <button id="withdraw-btn" type="button">Withdraw</button>
+                <button id="balance-btn" type="button">Check Balance</button>
+            </div>
+            <p id="message" aria-live="polite"></p>
+        </section>
+
+        <section class="panel" aria-label="Account summaries">
+            <h3>Account Summary</h3>
+            <p id="balance-output">Current balance: $0</p>
+            <p id="deposits-output">Deposits:</p>
+            <p id="withdrawals-output">Withdrawals:</p>
+        </section>
+
+        <section class="panel" aria-label="Transaction history">
+            <h3>Transaction History</h3>
+            <ul id="history"></ul>
+        </section>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+    <script src="Scripts/bank_html.js"></script>
+    <script src="Scripts/htmlinclude.js"></script>
+</body>
+</html>

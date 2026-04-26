@@ -1,0 +1,34 @@
+#drum-machine {
+    margin-top: 1rem;
+}
+
+#pad-bank {
+    display: grid;
+    gap: 0.6rem;
+    grid-template-columns: repeat(3, minmax(70px, 1fr));
+    max-width: 360px;
+}
+
+.drum-pad {
+    background: #f7f7f3;
+    border: 1px solid #c9c9bd;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.15rem;
+    font-weight: 700;
+    min-height: 70px;
+}
+
+.drum-pad:hover {
+    background: #ecece4;
+}
+
+#display {
+    background: #f7f7f3;
+    border: 1px solid #c9c9bd;
+    border-radius: 8px;
+    font-weight: 700;
+    margin-top: 0.8rem;
+    max-width: 360px;
+    padding: 0.7rem;
+}

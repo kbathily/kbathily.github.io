@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="stylesheet" href="styles/weather.css">
+    <title>K Bathily's Brave Kudu ~ ITIS 3135 | Brave Kudu Weather App</title>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h2>Brave Kudu Weather App</h2>
+        <section class="panel">
+            <h3>City Weather Lookup</h3>
+            <label for="city-select">City</label>
+            <select id="city-select">
+                <option value="">Select a city</option>
+                <option value="charlotte">Charlotte</option>
+                <option value="new york">New York</option>
+                <option value="los angeles">Los Angeles</option>
+                <option value="chicago">Chicago</option>
+                <option value="paris">Paris</option>
+                <option value="tokyo">Tokyo</option>
+                <option value="london">London</option>
+            </select>
+
+            <button id="get-weather-btn" type="button">Get Weather</button>
+        </section>
+
+        <div id="weather-container" class="panel">
+            <img id="weather-icon" src="images/myphotos/Kudu%20Brave%20icon.png" alt="Weather icon for selected city" />
+
+            <p id="main-temperature">Temperature: N/A</p>
+            <p id="feels-like">Feels like: N/A</p>
+            <p id="humidity">Humidity: N/A</p>
+            <p id="wind">Wind: N/A</p>
+            <p id="wind-gust">Wind gust: N/A</p>
+            <p id="weather-main">Condition: N/A</p>
+            <p id="location">Location: N/A</p>
+        </div>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+    <script src="Scripts/weather_html.js"></script>
+    <script src="Scripts/htmlinclude.js"></script>
+</body>
+</html>
