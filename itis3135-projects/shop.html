@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles/default.css">
+  <link rel="stylesheet" href="styles/interactions.css">
   <title>BB's Affordable Bundles | Shop</title>
 </head>
 <body>
@@ -18,8 +19,15 @@
       These featured listings are available for consultation and custom ordering.
     </p>
 
+    <div class="filter-row" role="group" aria-label="Filter by texture">
+      <button class="filter-btn filter-selected" data-filter="all" type="button">All</button>
+      <button class="filter-btn" data-filter="body-wave" type="button">Body Wave</button>
+      <button class="filter-btn" data-filter="deep-wave" type="button">Deep Wave</button>
+      <button class="filter-btn" data-filter="three-bundle" type="button">Bundle Deals</button>
+    </div>
+
     <section class="grid-cards" aria-label="Product cards">
-      <article class="card">
+      <article class="card" data-texture="body-wave">
         <img src="images/il_1140xN.5077867374_9zub.webp" alt="Brazilian body wave bundle set in natural black.">
         <h3>Brazilian Body Wave</h3>
         <p>Lengths: 16, 18, 20 inches</p>
@@ -28,7 +36,7 @@
         <a class="btn btn-secondary" href="product-details.html">View Details</a>
       </article>
 
-      <article class="card">
+      <article class="card" data-texture="deep-wave">
         <img src="images/il_1140xN.5126096637_907v.webp" alt="Curly deep wave bundle set with rich volume.">
         <h3>Deep Wave Curly</h3>
         <p>Lengths: 14, 16, 18 inches</p>
@@ -37,7 +45,7 @@
         <a class="btn btn-secondary" href="product-details.html">View Details</a>
       </article>
 
-      <article class="card">
+      <article class="card" data-texture="three-bundle">
         <img src="images/il_1140xN.5126096639_cyvl.webp" alt="Mixed-color body wave bundles for custom dye look.">
         <h3>Three Bundles Deal</h3>
         <p>Lengths: 10 to 30 inches</p>
@@ -60,5 +68,6 @@
   <div data-include="components/footer.html"></div>
   <script src="Scripts/htmlinclude.js"></script>
   <script src="Scripts/main.js"></script>
+  <script src="Scripts/filter.js"></script>
 </body>
 </html>

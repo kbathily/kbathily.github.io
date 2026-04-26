@@ -1,0 +1,124 @@
+/*
+ * interactions.css
+ * Styles for the three JS interactions on BB's Bundles client site.
+ * 1. Image slideshow (index.html)
+ * 2. Product filter (shop.html)
+ * 3. Bundle price calculator (product-details.html)
+ * Author: K Bathily | ITIS 3135 Spring 2026
+ */
+
+/* ── 1. SLIDESHOW ──────────────────────────────────────── */
+.slideshow {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.slideshow-track {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.slideshow-slide {
+  display: none;
+}
+
+.slideshow-active {
+  display: block;
+}
+
+.slideshow-slide img {
+  border-radius: 8px;
+  height: 320px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.slideshow-btn {
+  background: rgba(0, 0, 0, 0.55);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2rem;
+  height: 2.6rem;
+  line-height: 1;
+  width: 2.6rem;
+}
+
+.slideshow-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.slideshow-dots {
+  display: flex;
+  gap: 0.45rem;
+  justify-content: center;
+  margin-top: 0.6rem;
+}
+
+.slideshow-dot {
+  background: #ccc;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 0.7rem;
+  padding: 0;
+  width: 0.7rem;
+}
+
+.slideshow-dot-active {
+  background: #555;
+}
+
+/* ── 2. PRODUCT FILTER ─────────────────────────────────── */
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.filter-btn {
+  background: #f0f0ec;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.35rem 0.9rem;
+}
+
+.filter-btn:hover {
+  background: #e2e2da;
+}
+
+.filter-selected {
+  background: #333;
+  border-color: #333;
+  color: #fff;
+}
+
+/* ── 3. PRICE CALCULATOR ───────────────────────────────── */
+.calculator-panel label {
+  display: block;
+  font-weight: 600;
+  margin-top: 0.8rem;
+}
+
+.calculator-panel select {
+  display: block;
+  margin-top: 0.3rem;
+  max-width: 260px;
+  width: 100%;
+}
+
+.calc-output {
+  background: #f7f7f3;
+  border: 1px solid #d0d0c8;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+}
