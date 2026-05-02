@@ -17,6 +17,29 @@
     });
   }
 
+  function setValidationLinks() {
+    var pageUrl = window.location.href;
+    var htmlLink = document.getElementById('validation-html');
+    var cssLink = document.getElementById('validation-css');
+    var wcagLink = document.getElementById('validation-wcag');
+
+    if (window.location.protocol === 'file:') {
+      return;
+    }
+
+    if (htmlLink) {
+      htmlLink.href = 'https://validator.w3.org/nu/?doc=' + encodeURIComponent(pageUrl);
+    }
+
+    if (cssLink) {
+      cssLink.href = 'https://jigsaw.w3.org/css-validator/validator?uri=' + encodeURIComponent(pageUrl);
+    }
+
+    if (wcagLink) {
+      wcagLink.href = 'https://wave.webaim.org/report#/' + pageUrl;
+    }
+  }
+
   function setupContactForm() {
     var form = document.getElementById('contact-form');
     var status = document.getElementById('form-status');
@@ -40,6 +63,7 @@
   // Delay nav/form setup to allow HTMLInclude to inject shared components.
   window.addEventListener('load', function () {
     markCurrentNavLink();
+    setValidationLinks();
     setupContactForm();
   });
 })();
