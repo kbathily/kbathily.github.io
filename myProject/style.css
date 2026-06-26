@@ -1,0 +1,95 @@
+.intro {
+    margin-bottom: 1rem;
+    max-width: 70ch;
+}
+
+.translator-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.translator-card {
+    background: #f7f7f3;
+    border: 1px solid #c9c9bd;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.translator-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin: 0.5rem 0 0.35rem;
+}
+
+textarea {
+    width: 100%;
+    min-height: 120px;
+    border: 1px solid #b7b7aa;
+    border-radius: 8px;
+    padding: 0.65rem;
+    font: inherit;
+    resize: vertical;
+    background: #fff;
+}
+
+textarea[readonly] {
+    background: #f0f7ff;
+}
+
+.actions {
+    margin-top: 0.7rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+button {
+    border: 1px solid #114d8b;
+    background: #1f6fbf;
+    color: #fff;
+    border-radius: 6px;
+    padding: 0.45rem 0.7rem;
+    font: inherit;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #195e9f;
+}
+
+button.secondary {
+    background: #ecebe3;
+    color: #202020;
+    border-color: #a4a48f;
+}
+
+button.secondary:hover {
+    background: #deddd2;
+}
+
+.status {
+    margin-top: 1rem;
+    padding: 0.6rem 0.75rem;
+    border-radius: 6px;
+    background: #eef4e5;
+    border: 1px solid #b9cda2;
+    min-height: 2.5rem;
+}
+
+@media (max-width: 700px) {
+    .translator-card {
+        padding: 0.85rem;
+    }
+
+    button {
+        width: 100%;
+    }
+}

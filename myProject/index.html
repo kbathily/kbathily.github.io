@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/default.css">
+    <link rel="stylesheet" href="style.css">
+    <title>K Bathily's Brave Kudu ~ ITIS 3135 | Live Family Translator</title>
+</head>
+<body>
+    <div data-include="../components/header.html"></div>
+
+    <main>
+        <h2>Live Family Translator</h2>
+        <p class="intro">
+            Speak or type in either language and translate instantly for direct conversation.
+            Example: Wife speaks English to Mom in French, and Mom replies in French for English output.
+        </p>
+
+        <section class="translator-grid" aria-label="Two-way translator panels">
+            <article class="translator-card" aria-labelledby="en-fr-title">
+                <h3 id="en-fr-title">English to French</h3>
+                <label for="en-input">English Input</label>
+                <textarea id="en-input" placeholder="Type or speak in English"></textarea>
+
+                <div class="actions">
+                    <button id="en-listen" type="button">Start Listening (English)</button>
+                    <button id="en-translate" type="button">Translate to French</button>
+                </div>
+
+                <label for="fr-output">French Translation</label>
+                <textarea id="fr-output" readonly></textarea>
+
+                <div class="actions">
+                    <button id="fr-speak" type="button">Read French Aloud</button>
+                    <button id="en-clear" type="button" class="secondary">Clear</button>
+                </div>
+            </article>
+
+            <article class="translator-card" aria-labelledby="fr-en-title">
+                <h3 id="fr-en-title">French to English</h3>
+                <label for="fr-input">French Input</label>
+                <textarea id="fr-input" placeholder="Tapez ou parlez en francais"></textarea>
+
+                <div class="actions">
+                    <button id="fr-listen" type="button">Start Listening (French)</button>
+                    <button id="fr-translate" type="button">Translate to English</button>
+                </div>
+
+                <label for="en-output">English Translation</label>
+                <textarea id="en-output" readonly></textarea>
+
+                <div class="actions">
+                    <button id="en-speak" type="button">Read English Aloud</button>
+                    <button id="fr-clear" type="button" class="secondary">Clear</button>
+                </div>
+            </article>
+        </section>
+
+        <p id="status" class="status" aria-live="polite">Ready.</p>
+    </main>
+
+    <div data-include="../components/footer.html"></div>
+    <script src="app.js"></script>
+    <script src="../Scripts/htmlinclude.js"></script>
+</body>
+</html>
